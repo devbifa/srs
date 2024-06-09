@@ -1,0 +1,102 @@
+       <div class="form-group">
+
+<label for="form-nama_lengkap">Nama Lengkap</label>
+<input type="hidden" name="dts[event]" value="<?=$this->uri->segment(2)?>">
+<input type="hidden" name="dts[tipe_pendaftaran]" value="<?=$row['tipe_pendaftaran']?>">
+<input type="text" class="form-control" id="form-nama_lengkap" placeholder="Masukan Nama Lengkap" name="nama_lengkap[]">
+
+</div><div class="form-group">
+
+<label for="form-alamat">Alamat</label>
+
+<input type="text" class="form-control" id="form-alamat" placeholder="Masukan Alamat" name="alamat[]">
+
+</div><div class="form-group">
+
+<label for="form-kota">Kota</label>
+
+<input type="text" class="form-control" id="form-kota" placeholder="Masukan Kota" name="kota[]">
+
+</div><div class="form-group">
+
+<label for="form-tanggal_lahir">Tanggal Lahir</label>
+
+<input type="date" class="form-control" id="form-tanggal_lahir" placeholder="Masukan Tanggal Lahir" name="tanggal_lahir[]">
+
+</div><div class="form-group">
+
+<label for="form-nomor_start">Nomor Start</label>
+
+<input type="text" class="form-control" id="form-nomor_start" placeholder="Masukan Nomor Start" name="nomor_start[]">
+
+</div><div class="form-group">
+
+<label for="form-nama_jersey">Nama Jersey</label>
+
+<input type="text" class="form-control" id="form-nama_jersey" placeholder="Masukan Nama Jersey" name="nama_jersey[]">
+
+</div><div class="form-group">
+
+<label for="form-ukuran_jersey">Ukuran Jersey</label>
+
+<select style='width:100%' name="ukuran_jersey[]" class="form-control select2">
+
+  <?php 
+
+  $ukuran_jersey = $this->mymodel->selectWhere('ukuran_jersey',null);
+
+  foreach ($ukuran_jersey as $ukuran_jersey_record) {
+
+    echo "<option value=".$ukuran_jersey_record['id'].">".$ukuran_jersey_record['nama_ukuran_jersey']."</option>";
+
+  }
+
+  ?>
+
+</select>
+
+</div><div class="form-group">
+
+<label for="form-nomor_hp">Nomor Hp</label>
+
+<input type="text" class="form-control" id="form-nomor_hp" placeholder="Masukan Nomor Hp" name="nomor_hp[]">
+
+</div><div class="form-group">
+
+<label for="form-motor">Motor</label>
+
+<select style='width:100%' name="motor[]" class="form-control select2">
+
+  <?php 
+
+  $motor = $this->mymodel->selectWhere('motor',null);
+
+  foreach ($motor as $motor_record) {
+
+    echo "<option value=".$motor_record['id'].">".$motor_record['nama_motor']."</option>";
+
+  }
+
+  ?>
+
+</select>
+
+</div><div class="form-group">
+
+<label for="form-golongan_darah">Golongan Darah</label>
+
+<input type="text" class="form-control" id="form-golongan_darah" placeholder="Masukan Golongan Darah" name="golongan_darah[]">
+
+</div><div class="form-group">
+
+<label for="form-email">Email</label>
+
+<input type="text" class="form-control" id="form-email" placeholder="Masukan Email" name="email[]">
+
+</div><div class="form-group">
+
+<label for="form-file">File</label>
+
+<input type="file" class="form-control" id="form-file" placeholder="Masukan File" name="file">
+
+</div>

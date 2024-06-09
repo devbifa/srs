@@ -1,0 +1,165 @@
+<a href="<?= base_url('master/role/create') ?>">
+
+<button type="button" class="btn btn-sm btn-success float-1"><i class="fa fa-plus"></i></button> 
+
+</a>
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Role
+        <small>master</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">master</a></li>
+        <li class="active">Role</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-header">
+              <div class="row">
+                <div class="col-md-6">
+                  <select onchange="loadtable(this.value)" id="select-status" style="width: 150px" class="form-control">
+                      <option value="ENABLE">ENABLE</option>
+                      <option value="DISABLE">DISABLE</option>
+
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <div class="pull-right">
+                  <a href="<?= base_url('master/role/create') ?>">
+                    <button type="button" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Tambah Role</button> 
+                  </a>
+                  <a href="<?= base_url('fitur/ekspor/role') ?>" target="_blank">
+                    <button type="button" class="btn btn-sm btn-warning"><i class="fa fa-file-excel-o"></i> Ekspor Role</button> 
+                  </a>
+                  <button type="button" class="btn btn-sm btn-info" onclick="$('#modal-impor').modal()"><i class="fa fa-file-excel-o"></i> Import Role</button>
+                  </div>
+                </div>  
+              </div>
+              
+            </div>
+            <div class="box-header-material box-header-material-text">
+                <div class="row">
+                <div class="col-xs-10">
+                ROLE
+                </div>
+                <div class="col-xs-2">
+                    <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="show_error"></div>
+
+                <div class="table-responsive">
+
+<table class="table table-bordered" id="datatable" >
+<thead>
+  <tr class="bg-success">
+    <th>NUM</th>
+    <th class="text-left">ROLE</th>
+    <th class="text-left">CREATED BY</th>
+    <th class="text-left">CREATED ROLE</th>
+  </tr>
+</thead>
+<tbody>
+  <?php 
+  $role = $_SESSION['role'];
+
+  if($_SESSION['role']=='1'){
+    $data = $this->mymodel->selectWhere("role","id NOT IN ('4','25')");
+  }else if($_SESSION['role']=='25'){
+    $data = $this->mymodel->selectWhere("role","id NOT IN ('4','25')");
+  }else{
+    $data = $this->mymodel->selectWithQuery("SELECT * FROM role WHERE created_role = '$role' AND status = 'ENABLE' ORDER BY role ASC");
+  }
+
+  
+  foreach($data as $key=>$val){ 
+    $user = $this->mymodel->selectDataOne('user',array('id'=>$val['created_by']));
+    $role = $this->mymodel->selectDataOne('role',array('id'=>$val['created_role']));
+  ?>
+  <tr>
+    <td style="width:60px;"><?=$key+1?></td>
+    <td class="text-left"><a href="<?=base_url()?>master/role/edit/<?=$val['id']?>"><?=$val['role']?></a></td>
+    <td class="text-left"><?=$user['full_name']?></td>
+    <td class="text-left"><?=$role['role']?></td>
+  </tr>
+  <?php } ?>
+  </tbody>
+</table>
+
+</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-delete">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <form id="upload-delete" action="<?= base_url('master/role/delete') ?>">
+              <div class="modal-header">
+                  <h5 class="modal-title">Confirm delete</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <input type="hidden" name="id" id="delete-input">
+                  <p>Are you sure to delete this data?</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-danger btn-send">Yes, Delete</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+              </form>
+          </div>
+      </div>
+  </div> 
+
+  <div class="modal fade" id="modal-impor">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Impor Role</h4>
+        </div>
+        <form action="<?= base_url('fitur/impor/role') ?>" method="POST" role="form" enctype="multipart/form-data">
+
+        <div class="modal-body">
+            <div class="form-group">
+              <label for="">File Excel</label>
+              <input type="file" class="form-control" id="" name="file" placeholder="Input field">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+       
+          </div> </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
