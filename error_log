@@ -1,0 +1,47 @@
+[15-Aug-2019 08:01:36 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Customer in /home/gatokoco/public_html/sop/application/controllers/report/Customer.php on line 0
+[21-Aug-2019 11:02:37 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required './assets/html2pdf/html2pdf.class.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 544
+[21-Aug-2019 11:02:39 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required './assets/html2pdf/html2pdf.class.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 544
+[21-Aug-2019 11:34:37 Asia/Jakarta] PHP Fatal error:  Class 'Html2Pdf' not found in /home/gatokoco/public_html/sop/application/controllers/Tes.php on line 44
+[21-Aug-2019 11:35:16 Asia/Jakarta] PHP Fatal error:  Call to a member function setDefaultFont() on null in /home/gatokoco/public_html/sop/application/controllers/Tes.php on line 45
+[26-Sep-2019 11:55:56 Asia/Jakarta] PHP Fatal error:  Call to a member function upload() on null in /home/gatokoco/public_html/sop/application/controllers/Uploader.php on line 22
+[26-Sep-2019 11:58:48 Asia/Jakarta] PHP Fatal error:  Call to a member function upload() on null in /home/gatokoco/public_html/sop/application/controllers/Uploader.php on line 21
+[26-Sep-2019 11:58:56 Asia/Jakarta] PHP Fatal error:  Call to a member function upload() on null in /home/gatokoco/public_html/sop/application/controllers/Uploader.php on line 21
+[26-Sep-2019 11:59:13 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 11:59:21 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 11:59:28 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 11:59:32 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 12:01:13 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 12:01:18 Asia/Jakarta] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 19
+[26-Sep-2019 12:02:29 Asia/Jakarta] PHP Fatal error:  Call to a member function do_upload() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 21
+[26-Sep-2019 12:02:34 Asia/Jakarta] PHP Fatal error:  Call to a member function do_upload() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 21
+[26-Sep-2019 12:04:40 Asia/Jakarta] PHP Fatal error:  Call to a member function display_errors() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 22
+[26-Sep-2019 12:04:44 Asia/Jakarta] PHP Fatal error:  Call to a member function display_errors() on null in /home/gatokoco/public_html/sop/application/libraries/Uploadfile.php on line 22
+[30-Sep-2019 09:20:22 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/gatokoco/public_html/sop/application/models/Mymodel.php on line 47
+[01-Oct-2019 10:48:45 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/gatokoco/public_html/sop/application/views/crud/Controller.php on line 525
+[01-Oct-2019 03:52:03 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '$' in /home/gatokoco/public_html/sop/application/controllers/master/Contohmaster.php on line 159
+[01-Oct-2019 03:54:23 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/master/Contohmaster.php on line 175
+[01-Oct-2019 03:55:20 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gatokoco/public_html/sop/application/controllers/master/Contohmaster.php on line 182
+[01-Oct-2019 11:55:40 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:55:49 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:55:57 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:56:20 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:56:47 Asia/Jakarta] PHP Fatal error:  Call to a member function row_array() on array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:57:01 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:57:20 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:57:27 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:57:28 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 11:59:35 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 12:00:00 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 12:00:39 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 12:00:43 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 20
+[01-Oct-2019 06:27:00 UTC] PHP Fatal error:  Class 'My_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Konfig_mail.php on line 3
+[01-Oct-2019 13:43:35 Asia/Jakarta] PHP Fatal error:  Call to undefined method PHPMailer::isSMTP() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 250
+[01-Oct-2019 13:44:23 Asia/Jakarta] PHP Fatal error:  Call to undefined method PHPMailer::isSMTP() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 251
+[01-Oct-2019 13:44:43 Asia/Jakarta] PHP Fatal error:  Call to a member function load() on null in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 248
+[01-Oct-2019 13:45:02 Asia/Jakarta] PHP Fatal error:  Call to undefined method PHPMailer::isSMTP() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 250
+[01-Oct-2019 13:45:35 Asia/Jakarta] PHP Fatal error:  Call to undefined method PHPMailer::isSMTP() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 250
+[01-Oct-2019 13:47:20 Asia/Jakarta] PHP Fatal error:  Call to undefined method PHPMailer::isSMTP() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 250
+[01-Oct-2019 07:25:15 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '$' in /home/gatokoco/public_html/sop/application/controllers/master/Customer.php on line 315
+[11-Oct-2019 10:40:54 Asia/Jakarta] PHP Fatal error:  Call to a member function sonDecode() on null in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 41
+[11-Oct-2019 10:41:01 Asia/Jakarta] PHP Fatal error:  Call to a member function sonDecode() on null in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 41
+[08-Nov-2019 10:21:49 Asia/Jakarta] PHP Fatal error:  Call to undefined function mb_internal_encoding() in /home/karyas/sop.karyastudio.com/application/third_party/dompdf/dompdf_config.inc.php on line 442

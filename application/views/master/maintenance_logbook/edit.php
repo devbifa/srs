@@ -1987,9 +1987,9 @@ if($val['file']){
 </th>
 <th class="text-center">PART NUMBER
 </th>
-<th class="text-center">S/N OFF
-</th>
 <th class="text-center">S/N ON
+</th>
+<th class="text-center">S/N OFF
 </th>
 <th class="text-center">SIGN
 </th>
